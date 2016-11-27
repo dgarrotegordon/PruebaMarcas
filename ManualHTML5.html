@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<title>Manual HTML5</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Daniel Garrote">
+	<h1 id="Título">Manual de</h1>
+	<img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" width="150px" height="150px" alt="HTML 5">
+	</head>
+	<hr>
+	<body>
+	<h2 id="indice">Índice</h2>
+	<h3><a href="#estructura">1.- Estructura</a></h3>
+	<h3><a href="#head">2.- HEAD</a></h3>
+	<h3><a href="#body">3.- BODY</a></h3>
+<ul type="rect"><b>
+<li><a href="#manejotexto">3.1.- Manejo de Texto</a></li>
+<li><a href="#manejolista">3.2.- Manejo de Listas</a></li>
+<li><a href="#enlaces">3.3.- Enlaces</a></li>
+<li><a href="#imagenes">3.4.- Insertar Imágenes</a></li>
+<li><a href="#tablas">3.5.- Crear Tablas</a></li>
+<li><a href="#mapaimagenes">3.6.- Crear Mapas de Imágenes</a></li>
+</ul></b>
+	<h3><a href="#foot">4.- FOOT</a></h3>
+	
+	<hr><hr>
+	
+	<h2 id="estructura">1.- Estructura</h2>
+	<p>Crear un documento con HTML5 es bastante sencillo si conoces su estructura.<br>
+	En primer lugar, debemos colocar la etiqueta &lt!DOCTYPE html&gt, que no tiene etiqueta de cierre. Después colocamos la etiqueta &lthtml&gt y la cerramos(&lt/html&gt). Y dentro de esta etiqueta es donde escribiremos nuestro documento completo.<br>
+	<b>Nuestro documento se dividirá en tres secciones:</b></p>
+	<p><b>HEAD</b><br>
+	Será la cabecera de nuestro documento. Se declara usando &lthead&gt y podemos declarar el título(&lttitle&gt), la codificación(&ltmeta charset="UTF-8"&gt) y otros elementos como enlaces, estilos, etc.</p>
+	<p><b>BODY</b><br>
+	Como su propio nombre indica, esto será el cuerpo o contenido general del documento. Es lo que el navegador nos mostrará al abrirlo.</p>
+	<p><b>FOOT</b><br>
+	En este apartado introduciremos los estilos CSS que queramos para dar formato a la página que estemos creando con el documento.</p>
+	
+	<hr><hr>
+	
+	<h2 id="head">2.- HEAD</h2>
+	<p>En la cabecera podemos encontrar:</p>
+		<dl>
+		<dt><b>Title</b>(&lttitle&gt)</dt>
+			<dd>Define un título para el documento</dd>
+		<dt><b>Meta</b>(&ltmeta&gt)</dt>
+		<dd>Define un metadato de un documento, en este caso le indicaremos la codificación del documento al navegador</dd>
+		<dt><b>Lang</b>(&ltlang&gt)</dt>
+		<dd>Definimos un idioma para el documento</dd>
+		<dt><b>Style</b>(&ltstyle&gt)</dt>
+		<dd>definimos un estilo para la información del documento</dd>
+		</dl>
+		
+	<hr><hr>
+	
+	<h2 id="body">3.- BODY</h2>
+	<p>En el cuerpo encontraremos:</p>
+	<dl>
+	<dt><b>Elementos de bloque:</b></dt>
+	<dd>Contienen elementos de línea o de bloque, siempre comienzan en una nueva línea.</dd>
+	<dt><b>Elementos de línea:</b></dt>
+	<dd>Contienen solo datos o elementos de línea.</dd>
+	</dl>
+	<hr>
+	<h3 id="manejotexto">3.1.- Manejo de Texto</h3>
+	<p>A continuación se nombrarán varios elementos de bloque o línea:</p>
+	<ul type="square">
+	<li><b>3.1.1.- Encabezados(&lth1&gt a &lth6&gt)</b></li>
+	<p>Cómo su propio nombre indica, establecen encabezados o títulos. Es un elemento de línea y se clasifican con números del 1 al 6, siendo <b>h1</b> el más grande y <b>h6</b> el más pequeño.<br>
+	Veamos como quedaría cada uno de ellos:</p>
+	<h1>h1</h1>
+	<h2>h2</h2>
+	<h3>h3</h3>
+	<h4>h4</h4>
+	<h5>h5</h5>
+	<h6>h6</h6>
+	<li><b>3.1.2.- Párrafo</b></li>
+	<p>Esta etiqueta agrupa todas las líneas de su interior. Dentro de esta etiqueta, los saltos de línea deben ser explícitos. Esto lo conseguimos con la etiqueta &ltbr&gt para un salto de línea en blanco o con la etiqueta &lthr&gt si queremos visualizar una línea horizontal, que separe un párrafo de otro elemento. También tenemos la etiqueta &ltwbr&gt para crear saltos de línea en un palabra por si el navegador reduce el formato del texto.<br>
+	Tenemos también otro tipo de etiquetas para el manejo de texto que se deben poner dentro de un párrafo.<br>
+	<ul type="disc">
+	<li><b>Negrita</b> usando &ltb&gt.</li>
+	<li><i>Bastardilla/Cursiva/Itálica</i> usando &lti&gt.</li>
+	<li><u>Subrayado</u> usando &ltu&gt.</li>
+	<li><s>Tachado</s> usando las etiquetas &lts&gt o &ltstrike&gt.</li>
+	<li><big>Texto mayor</big> usando &ltbig&gt.</li>
+	<li><small>Texto menor</small> usando &ltsmall&gt.</li>
+	</ul><br>
+	Finalmente, podemos representar un texto de forma que el navegador lo muestre tal como aparece en el documento. De esa forma, respetaría las tabulaciones, saltos de línea o espacios en blanco. Esto se haría utilizando la etiqueta &ltpre&gt.
+	</p>
+	</ul>
+	<hr>
+	<h3 id="manejolista">3.2.- Manejo de Listas</h3>
+	<ul type="square">
+	<li><b>3.2.1.- Lista de elementos no ordenada</b></li>
+	<p>En el caso de las listas no ordenadas, tenemos que usar dos etiquetas. La primera etiqueta que debemos usar es la que define el tipo de lista &ltul&gt. Dentro de esta etiqueta, debemos aplicar la etiqueta &ltli&gt para cada elemento. A parte de esto, con el atributo "type" podemos cambiar el tipo de símbolo utilizado delante de cada elemento(p.e. &ltul type="disc"&gt).
+	Así se vería una lista de este tipo con diferentes tipos de símbolos.</p>
+	<ul type="square">
+	<li>Atributo type "square" coloca un cuadrado como símbolo.</li>
+	<li>2º Elemento</li>
+	</ul><br>
+	<ul type="disc">
+	<li>Atributo type "disc" coloca un punto negro.</li>
+	<li>2º Elemento</li>
+	</ul><br>
+	<ul type="circle">
+	<li>Atributo type "circle" coloca un punto con fondo blanco.</li>
+	<li>2º Elemento</li>
+	</ul>
+	<br><br>
+	<li><b>3.2.2.- Lista de elementos ordenada</b></li>
+	<p>las listas ordenadas, al igual que las no ordenadas, se componen de dos etiquetas. La primera es la que indica el tipo de lista &ltol&gt, y dentro de esta definiremos cada elemento de la lista con la etiqueta &ltli&gt(como en las listas no ordenadas).  Este tipo de lista puede tener varios atributos:
+		<dl>
+		<dt><b>Atributo type:</b></dt>
+		<dd>Al igual que en las listas no ordenadas, nos permite elegir el tipo de símbolo o carácter que precede a los elementos de nuestra lista.<br><br>
+		p.e. &ltol type="I"&gt
+		<ol type="I">
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		</ol>
+		</dd>
+		<br>
+		<dt><b>Atributo start:</b></dt>
+		<dd>Este atributo nos permite especificar en que número o carácter comenzará a contar nuestra lista.<br><br>
+		p.e. &ltol type="I" start="3"&gt
+		<ol type="I" start="3">
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		</ol>
+		</dd>
+		<br>
+		<dt><b>Atributo reversed:</b></dt>
+		<dd>Finalmente tenemos el atributo reversed. Con este atributo podemos hacer que nuestra lista se numere de forma inversa.<br><br>
+		p.e. &ltol reversed start="3"&gt
+		<ol reversed start="3">
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		</ol>
+		</dd>
+		</dl>
+	</p>
+	<br>
+	<li><b>3.2.3.- Lista de definiciones</b></li>
+	<p>En el caso de las listas de definiciones tenemos tres etiquetas:
+	<ul type="disc">
+	<li>Etiqueta que indica el tipo de lista: &ltdl&gt</li>
+	<li>Etiqueta que marca el término que se va a definir: &ltdt&gt</li>
+	<li>Etiqueta que acota la definición: &ltdd&gt</li>
+	</ul><br>
+	Cabe añadir que este tipo de etiquetas no es muy común en la red.
+	</p>
+	</ul>
+	<hr>
+	<h3 id="enlaces">3.3.- Enlaces</h3>
+	<p>También llamados hipervínculos, sirven para establecer una referencia a otro elemento del mismo u otro documento de manera que nos lleve directamente a él.<br>
+	Estos enlaces se acotan con la etiqueta <b>&lta&gt</b>, y deben llevar el atributo <b>"href"</b> para indicar su destino.<br>
+	La manera de escribir correctamente un enlace sería asi: &lta href="url_de_destino"&gtnombre_del_enlace&lt/a&gt <br>
+	Podemos poner cómo ejemplo este enlace al buscador de <a href="https://www.google.es/">Google</a>.
+	</p>
+	<hr>
+	<h3 id="imagenes">3.4.- Insertar Imágenes</h3>
+	<p>Para insertar imágenes en nuestro documento, debemos usar la etiqueta &ltimg&gt acompañada del atributo <b>"src"</b> y la dirección de la imagen. Con los atributos <b>width</b> y <b>height</b> indicamos el tamaño en el que se visualizará la imagen y con <b>alt</b> le damos un nombre para casos en los que el navegador no permita visualizar la imagen.<br>
+	Esta sería una etiqueta genérica: &ltimg src="url_imagen" width="ancho_px" height="alto_px" alt="nombre_imagen"&gt <br> 
+	Como ejemplo pondré la etiqueta y debajo la imagen que se visualizará.<br><br>
+	&ltimg src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" width="150px" height="150px" alt="HTML 5"&gt <br><br>
+	<img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" width="150px" height="150px" alt="HTML 5"><br>
+	</p>
+	<hr>
+	<h3 id="tablas">3.5.- Crear Tablas</h3>
+	<p>Para crear una tabla tenemos que considerar primero cuantas filas y columnas necesitamos. A parte si queremos alguna fila de encabezado o algun elemento adicional. Para crear una tabla debemos usar la etiqueta <b>&lttable&gt</b>. esta etiqueta cuenta con etiquetas adicionales como <b>&lttr&gt</b> para colocar filas y dentro de estas <b>&lttd&gt</b> para crear celdas debtro de estas filas.<br>
+	Los atributos más importantes son:
+	<ul>
+	<li><b>Atributos de la tabla</b></li>
+	<p>El más utilizado es el atributo <b>border</b> que sirve para definir si la tabla lleva borde o no. En anteriores versiones de HTML se le daban valores, en HTML 5 simplemente se le asigna el valor 1 ó 0 dependiendo de si queremos borde o no, el tamaño del borde se debe hacer con estilos en CSS. Para los bordes internos usaremos atributos <b>rules</b>. Tambien los datos de las celdas se pueden ajustar con el atributo <b>align</b> hacia la derecha, centro o izquierda.
+	</p>
+	<li><b>Atributos de las celdas:</b></li>
+	<p><b>rowspan</b>, que sirve para denominar el número de filas que ocupa esa celda, y <b>colspan</b>, que se utiliza para denominar el número de columnas que ocupa.
+	</p>
+	<li><b>Atributos de las filas:</b></li>
+	<p>En este apartado entrarían los atributos <b>thead</b>, que define una fila como cabecera de la tabla, <b>tbody</b> que definiría una o varias filas como el cuerpo de la tabla y <b>tfoot</b> que sería para definir una línea como pie de tabla.
+	</p>
+	</ul>
+	<p>A continuación pondremos el ejemplo de una tabla en HTML 5, de manera que veamos un poco mejor la manera de crearla.
+	
+	<table border=1>
+	<thead>Tabla HTML 5(&ltthead&gt)</thead>
+	<tr>
+		<td>Celda 1x1
+		<td>Celda 1x2
+		<td>Celda 1x3
+		<td>Celda 1x4
+		<td rowspan="5"> usaremos <br>
+		&lttd rowspan="número_de_celdas"&gt <br>
+		para ocupar una columna
+		</tr>
+	<tr>
+		<td>Celda 2x1
+		<td>Celda 2x2
+		<td>Celda 2x3
+		<td>Celda 2x4
+		</tr>
+	<tr>
+		<td colspan=4>Para alargar una celda toda una fila escribimos &ltth colspan="número_de_celdas"&gt
+		</tr>
+	<tr>
+		<td>Celda 4x1
+		<td>Celda 4x2
+		<td>Celda 4x3
+		<td>Celda 4x4
+		</tr>
+</table>
+	</p>
+	
+	</p>
+	<hr>
+	<h3 id="mapaimagenes">3.6.- Crear Mapa de Imágenes</h3>
+	<p>Los mapas de imágenes se utilizan para hacer interactivo el documento al visualizarlo en el ordenador. Usaremos la etiqueta &ltarea&gt añadida a la etiqueta &ltimg&gt para especificar una región de la imagen y el vínculo que asociaremos a esa región. A parte tenemos el atributo <b>shape</b> que nos permite especificar una región(rect, circle,etc.) con coordenadas especificando la posición en la pantalla. En caso de un rectángulo daríamos las cordenadas de la esquina superior izquierda(x,y) y de la esquina inferior derecha(x,y), en el caso de un cículo indicaríamos el centro(x,y) y una tercera cifra para el radio<br><br>
+	Aquí se muestra un ejemplo de un mapa de imágenes:<br><br>
+	<img usemap="#mapa" src="https://www.sololearn.com/Uploads/html-css.jpg" width="675px" height="325" alt="HTML y CSS">
+	<map name="mapa">
+	<area shape="rect" coords="41,83,156,211" href="http://www.w3schools.com/html/html5_intro.asp">
+	<area shape="rect" coords="482,83,600,213" href="http://www.w3schools.com/css/">
+	</map>
+	</p>
+	<p>El primer paso sería insertar la imagen, y dentro colocar el atributo <b>usemap</b> de esta manera:
+	<b>&ltimg usemap="#nombre_mapa" src="https...&gt </b><br>
+	Luego añadiríamos la etiqueta &ltmap&gt y el atributo <b>shape</b> para colocar un par de enlaces en las coordenadas de la imagen que queramos. Así que escribiremos lo siguiente:<br>
+	&ltmap name="mapa"&gt <br>
+	&ltarea shape="tipo_area" coords="cifras coord_separadas_por_comas" href="url_vínculo"&gt <br>
+	Esto podemos repetirlo tantas veces como vínculos queramos poner en la imagen <br>	
+	No nos olvidemos de cerrar la etiqueta &lt/map&gt <br>
+	Podemos probar que en el ejemplo de arriba si clicamos en el logo de HTML o CSS, nos lleva a la página web de w3c, al apartado de cada uno.
+	</p>
+	<hr><hr>
+	<h2 id="foot">4.-FOOT</h2>
+	<p>Esta etiqueta delimita el espacio donde incluiremos los datos del autor, el contacto, el copyright y un enlace al principio del documento.
+	</p>
+	</body>
+	<foot>
+	<p><b>Realizado por:</b><i>Don Daniel Garrote Gordon</i>
+	</p>
+	<a href="#indice"> Arriba</a>
+	</foot>
+</html>
